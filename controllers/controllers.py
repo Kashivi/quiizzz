@@ -2,8 +2,9 @@ from models.models import *
 from flask import Flask, request, render_template, redirect , flash
 from flask import current_app as app
 from flask_sqlalchemy import SQLAlchemy
+from flask import current_app as app
 
-app = Flask(__name__)
+# app = Flask(__name__)
 app.secret_key = "afatyxuny" 
 
 @app.route('/')
