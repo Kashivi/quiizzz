@@ -1,9 +1,10 @@
 from datetime import datetime
 from flask import request, render_template, redirect , flash
-from flask import current_app as app
+#from flask import current_app as app
 from models.models import *
 from werkzeug.security import generate_password_hash, check_password_hash
 from models.database import db
+from app import app
 
 @app.route('/')
 def home():
