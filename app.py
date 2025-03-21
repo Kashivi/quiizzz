@@ -13,6 +13,11 @@ def create_app():
 
 app = create_app()
 print("Template Folder:", app.template_folder)
+print("Available Templates:")
+for root, _, files in os.walk(app.template_folder):
+    for file in files:
+        print(os.path.relpath(os.path.join(root, file), app.template_folder))
+
 from controllers.controllers import *
 
 
